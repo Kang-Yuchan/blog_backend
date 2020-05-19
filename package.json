@@ -1,0 +1,25 @@
+{
+  "name": "blog-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kang-Yuchan/blog_backend.git"
+  },
+  "author": "Yuchan Kang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kang-Yuchan/blog_backend/issues"
+  },
+  "homepage": "https://github.com/Kang-Yuchan/blog_backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "global": "^4.4.0",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.4"
+  }
+}
