@@ -8,14 +8,27 @@ class Post {
     return this.readData();
   }
 
-  getIntividualBlog() {}
+  getIntividualBlog(postId) {
+    const posts = this.readData();
+    const foundPost = posts.find((post) => post.id === postId);
+    return foundPost;
+  }
 
-  add() {}
+  add(newPost) {
+    const currentPosts = this.readData();
+    currentPosts.unshift(newPost);
+    this.storeData(newPost);
+  }
 
   readData() {
     const rawdata = fs.readFileSync(PATH);
-    const post = JSON.parse(rawdata);
-    return post;
+    const posts = JSON.parse(rawdata);
+    return posts;
+  }
+
+  storeData(rawdata) {
+    const data = JSON.stringify(rawdata);
+    fs.writeFileSync(PATH, data);
   }
 }
 
